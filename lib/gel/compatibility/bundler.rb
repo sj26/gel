@@ -10,6 +10,7 @@ module Bundler
   end
 
   def self.default_lockfile
+    require "pathname"
     Pathname.new(Gel::Environment.lockfile_name)
   end
 

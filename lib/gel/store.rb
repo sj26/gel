@@ -10,7 +10,7 @@ class Gel::Store
     @root = File.realpath(File.expand_path(root))
     @primary_db = Gel::DB.new(root, "store")
     @lib_db = Gel::DB.new(root, "libs")
-    @rlib_db = Gel::DB::File.new(root, "meta")
+    @rlib_db = Gel::DB.new(root, "meta")
 
     @monitor = Monitor.new
   end
